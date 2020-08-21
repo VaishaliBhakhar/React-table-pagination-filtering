@@ -51,7 +51,7 @@ class DataView extends Component<DataViewProps> {
     const {receivedData, isLoadingData} = this.props;
     return (
       isLoadingData ? (<CircularProgress color="secondary" />) :
-      (<TableView receivedData={receivedData} searchText=""/>)
+      (<TableView receivedData={receivedData} />)
     );
   }
 }

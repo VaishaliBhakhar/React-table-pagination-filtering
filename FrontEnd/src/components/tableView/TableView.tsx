@@ -73,7 +73,7 @@ export type typeOfFields = {
 
 type TableViewProps = {
   receivedData: Array<typeOfFields>;
-  searchText: string;
+  // searchText: string;
 }
 
 
@@ -210,9 +210,10 @@ const StyledTableCell = withStyles((theme: Theme) =>
 
 
 export default function TableView(props: TableViewProps) {
-    const {receivedData, searchText} = props;
+    const {receivedData} = props;
     let rowArray:Array<typeOfFields> = [];
     let newRowArray:Array<typeOfFields> = [];
+    let searchText = '';
     
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
@@ -265,7 +266,7 @@ export default function TableView(props: TableViewProps) {
                 ))}
                 </TableRow>
                 <TableRow>{columns.map((column) => (<TableCell  style={{textAlign:'center'}} key={column.id}>{
-                    <input type="text" value={searchText} onChange={(e)=>handleSearchChange(e,column.label)}/>
+                    <input type="text" name="search" onChange={(e)=>handleSearchChange(e,column.label)}/>
                 }</TableCell>))}</TableRow>
             </TableHead>
             <TableBody>
