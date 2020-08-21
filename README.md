@@ -4,7 +4,7 @@ Get data from api and display it in UI in table formate with pagination and also
 
 1. Go to project folder: `cd React-table-pagination-filtering`
 
-2.To run backend go to: `cd backend`
+2. To run backend go to: `cd backend`
 
 3. Insatll all dependancies using: `npm install`
 
