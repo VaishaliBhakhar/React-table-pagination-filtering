@@ -38,16 +38,12 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-// async function DataView(props: DataViewProps) {
-class DataView extends Component<DataViewProps> {
-  
-  
+class DataView extends Component<DataViewProps> {  
   async componentDidMount() {
     const { actions } = this.props;
     await actions.fetchData();
   }
   render() {
-    // const classes = useStyles();
     const {receivedData, isLoadingData} = this.props;
     return (
       isLoadingData ? (<CircularProgress color="secondary" />) :
