@@ -73,7 +73,6 @@ export type typeOfFields = {
 
 type TableViewProps = {
   receivedData: Array<typeOfFields>;
-  // searchText: string;
 }
 
 
@@ -213,7 +212,6 @@ export default function TableView(props: TableViewProps) {
     const {receivedData} = props;
     let rowArray:Array<typeOfFields> = [];
     let newRowArray:Array<typeOfFields> = [];
-    let searchText = '';
     
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
